@@ -2,8 +2,7 @@ $('document').ready(function() {
 
 	if (Modernizr.mq('only all and (max-width: 992px)')) {
 
-		// var file = "http://adriankelly.net/adriankellytech/js/post-data.csv";
-		var file = "js//post-data.csv";
+		var file = "http://adriankelly.net/adriankellytech/js/post-data.csv";
 
 		/**
 		 * Parse csv into JS readable array of objects
@@ -28,20 +27,13 @@ $('document').ready(function() {
 				$('.csv-target').append('<div class="post">' + '<h3 class="post-author">' + dataset[i].Name + '</h3>' + '<span class="post-date text-right">' + dataset[i].Date + '</span>'	+ '<address class="post-email"><a href="mailto:#">' +dataset[i].Email + '</a></address>' + '<p>' + dataset[i].Text + '</p>'	+ '</div>'
 				);
 			}
-			// if class selected doesn't exist listen for click,
-			// if click add class and remove sibilings
 
 			// Enable individual post to be higlighted on click
 			$('.post').click(function(){
-				if ($(this).hasClass('selected')) {
-					$(this).removeClass('selected');
-				} else {
-					$(this).addClass('selected').siblings().removeClass('selected');
-				// $(this).toggleClass('selected').siblings().removeClass('selected');
+				$(this).toggleClass('selected').siblings().removeClass('selected');
 		        $(this).css('-moz-user-select', 'none');
         		$(this).css('-webkit-user-select', 'none');
-				}
-			});
+				});
 		}
 
 		/**

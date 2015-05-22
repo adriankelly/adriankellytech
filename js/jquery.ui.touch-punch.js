@@ -30,19 +30,19 @@
    */
   function simulateMouseEvent (event, simulatedType) {
 
-// Ignore multi-touch events
-if (event.originalEvent.touches.length > 1) {
-  return;
-}
-var touch = event.originalEvent.changedTouches[0],
-    simulatedEvent = document.createEvent('MouseEvents');
+    // Ignore multi-touch events
+    if (event.originalEvent.touches.length > 1) {
+      return;
+    }
+    var touch = event.originalEvent.changedTouches[0],
+        simulatedEvent = document.createEvent('MouseEvents');
 
-//Check if element is an input or a textarea
-if ($(touch.target).is(".post")) {
-    event.stopPropagation();
-} else {
-    event.preventDefault();
-}
+    //Check if element is an input or a textarea
+    if ($(touch.target).is(".selected")) {
+        event.stopPropagation();
+    } else {
+        event.preventDefault();
+    }
 
 //Check if element is an input or a textarea
 
