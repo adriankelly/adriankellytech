@@ -49,7 +49,8 @@ $('document').ready(function() {
 		$("#sort").sortable({
 			tolerance: 'pointer',
 			scroll: true,
-			delay: 350,
+			delay: 250,
+			distance: 30,
 			scrollSensitivity: 30,
 			opacity: 0.5,
 			placeholder: 'sort-target',
