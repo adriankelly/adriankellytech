@@ -37,13 +37,12 @@ $('document').ready(function() {
 				// 	$(this).removeClass('selected');
 				// } else {
 				// 	$(this).addClass('selected').disableSelection().siblings().removeClass('selected');
-				$(this).toggleClass('selected').siblings().removeClass('selected notSelectable');
+				$(this).toggleClass('selected').siblings().removeClass('selected');
 		        $(this).css('-moz-user-select', 'none');
         		$(this).css('-webkit-user-select', 'none');
 				}
 			);
 		}
-
 
 
 //    // $('.notSelectable').disableSelection();
@@ -69,7 +68,7 @@ $('document').ready(function() {
 		$("#sort").sortable({
 			tolerance: 'pointer',
 			scroll: true,
-			delay: 550,
+			delay: 350,
 			scrollSensitivity: 30,
 			opacity: 0.5,
 			placeholder: 'sort-target',
