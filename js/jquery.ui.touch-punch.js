@@ -37,7 +37,7 @@
     var touch = event.originalEvent.changedTouches[0],
         simulatedEvent = document.createEvent('MouseEvents');
 
-    if ($(touch.target).is(".post")) {
+    if ($(touch.target).is(".csv-target")) {
         event.stopPropagation();
     } else {
         event.preventDefault();
