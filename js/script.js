@@ -49,7 +49,7 @@ $('document').ready(function() {
 		$("#sort").sortable({
 			tolerance: 'pointer',
 			scroll: true,
-			delay: 150,
+			delay: 350,
 			scrollSensitivity: 30,
 			opacity: 0.5,
 			placeholder: 'sort-target',
