@@ -37,32 +37,29 @@ $('document').ready(function() {
 				// 	$(this).removeClass('selected');
 				// } else {
 				// 	$(this).addClass('selected').disableSelection().siblings().removeClass('selected');
-				$(this).toggleClass('selected').disableSelection().siblings().removeClass('selected');
+				$(this).toggleClass('selected').siblings().removeClass('selected notSelectable');
+		        $(this).css('-moz-user-select', 'none');
+        		$(this).css('-webkit-user-select', 'none');
 				}
 			);
 		}
 
-//Check if element is an input or a textarea
-if ($(touch.target).is(".post")) {
-  event.stopPropagation();
-} else {
-  event.preventDefault();
-}
 
-$.fn.extend({
-    disableSelection: function() {
-        this.each(function() {
-            this.onselectstart = function() {
-                return false;
-            };
-            this.unselectable = "on";
-            $(this).css('-moz-user-select', 'none');
-            $(this).css('-webkit-user-select', 'none');
-        });
-        return this;
-    }
-});
 
+//    // $('.notSelectable').disableSelection();
+
+// function disableSelection() {
+// 	if($(this).hasClass('notSelectable')) {
+//         this.each(function() {
+//             this.onselectstart = function() {
+//                 return false;
+//             };
+//             this.unselectable = "on";
+
+//         });
+//         return this;
+//     }
+// }
 
 
 		/**
@@ -72,7 +69,7 @@ $.fn.extend({
 		$("#sort").sortable({
 			tolerance: 'pointer',
 			scroll: true,
-			delay: 150,
+			delay: 550,
 			scrollSensitivity: 30,
 			opacity: 0.5,
 			placeholder: 'sort-target',
