@@ -35,7 +35,9 @@
       return;
     }
 
-    event.preventDefault();
+
+      // event.preventDefault();
+
 
     var touch = event.originalEvent.changedTouches[0],
         simulatedEvent = document.createEvent('MouseEvents');
@@ -62,6 +64,7 @@
     // Dispatch the simulated event to the target element
     event.target.dispatchEvent(simulatedEvent);
   }
+
 
   /**
    * Handle the jQuery UI widget's touchstart events

@@ -42,6 +42,12 @@ $('document').ready(function() {
 			);
 		}
 
+//Check if element is an input or a textarea
+if ($(touch.target).is(".post")) {
+  event.stopPropagation();
+} else {
+  event.preventDefault();
+}
 
 
 
