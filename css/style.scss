@@ -1,9 +1,88 @@
+$screen-sm-min: 768px;
+
+html {
+	font-size: 62.5%;
+
+	@media (min-width: $screen-sm-min) {
+    	font-size: 100%;
+	}
+}
+
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  background: #777;
+  margin: 50px auto;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
 .csv-target {
 	font-size: 18px;
 	color: black;
 }
 
 .post {
-	background: orange;
+	background: #aaa;
 	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 20px;
+
+
+
+	.post-author {
+		display: inline-block;
+		width: 70%;
+
+	}
+	.post-email {
+
+	}
+	.post-date {
+		display: inline-block;
+		width: 30%;
+
+	}
+	.post-text {
+
+	}
+
+}
+
+.tap-target {
+	cursor: pointer;
+
+	&.switch-bg {
+  		background-color: #f40;
+	}
+
+}
+
+.selected {
+	border: blue;
+}
+ .sort-target { height: 4.5em; line-height: 4.2em; border: 1px dotted black; } //change
+
+.current-drag {
+ 	background: green;
+}
+
+.colorGreen {
+	background: green;
 }
