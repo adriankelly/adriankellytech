@@ -33,33 +33,16 @@ $('document').ready(function() {
 
 			// Enable individual post to be higlighted on click
 			$('.post').click(function(){
-				// if ($(this).hasClass('selected')) {
-				// 	$(this).removeClass('selected');
-				// } else {
-				// 	$(this).addClass('selected').disableSelection().siblings().removeClass('selected');
-				$(this).toggleClass('selected').siblings().removeClass('selected');
+				if ($(this).hasClass('selected')) {
+					$(this).removeClass('selected');
+				} else {
+					$(this).addClass('selected').siblings().removeClass('selected');
+				// $(this).toggleClass('selected').siblings().removeClass('selected');
 		        $(this).css('-moz-user-select', 'none');
         		$(this).css('-webkit-user-select', 'none');
 				}
-			);
+			});
 		}
-
-
-//    // $('.notSelectable').disableSelection();
-
-// function disableSelection() {
-// 	if($(this).hasClass('notSelectable')) {
-//         this.each(function() {
-//             this.onselectstart = function() {
-//                 return false;
-//             };
-//             this.unselectable = "on";
-
-//         });
-//         return this;
-//     }
-// }
-
 
 		/**
 		 * jQuery UI sortable used to enable drag and drop of div elements
