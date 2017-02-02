@@ -1,5 +1,5 @@
 body {
-  background: #BFACA4;
+  background: #FCFFF5;
   margin: 50px auto; }
   @media (min-width: 768px) {
     body {
@@ -25,7 +25,7 @@ h1 {
       font-size: 1.8rem; } }
 
 .post {
-  background: #D9C6BF;
+  background: #FCFFF5;
   margin: 10px auto;
   border-radius: 10px;
   box-shadow: inset 0 0 3px #000;
@@ -43,11 +43,11 @@ h1 {
     width: 30%; }
 
 .selected {
-  background: #91CF66;
-  border: 3px solid #777; }
+  background: #D1DBBD;
+  box-shadow: inset 0 0 4px #000; }
 
 .current-drag {
-  background: #91CF66; }
+  background: #91AA9D; }
 
 .sort-target {
   height: 12rem;
