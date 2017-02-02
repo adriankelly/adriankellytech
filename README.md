@@ -1,4 +1,6 @@
 # csv-parse-mobile
+**NOTE: This project is for mobile devices and can only be viewed on smaller screens, there's a built-in redirect for desktop devices.**
+
 
 In completing this exercise, I made use of Bootstrap, with its technical rigour and speed it's an obvious choice.
 
